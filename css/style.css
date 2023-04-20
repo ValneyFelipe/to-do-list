@@ -1,0 +1,192 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(166, 167, 175, 0.271);
+    padding: 20px;
+}
+
+/*
+    nome das tarefas
+*/
+p {
+    word-wrap: break-word;
+    min-width: 300px;
+    text-align: justify;
+}
+
+.text-paragraph {/*paragrafos criados dinamicamente*/
+    width: 100%;
+}
+.title { /*title modal*/
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(117, 42, 188);
+    font-size: 40px;
+}
+
+#title-list {
+    width: 200px;
+    margin: 50px auto;
+    text-align: center;
+    text-transform: uppercase;
+    font: bold 20pt Arial;
+    color: rgba(60, 60, 60, 0.567);
+}
+
+.hidden{ /*esconder title-list*/
+    display: none;
+}
+
+/*container conteudo geral*/
+.wrapper {
+    max-width: 980px;
+    margin: 10% auto;
+    box-shadow: 4px 4px 4px 4px rgba(25, 23, 53, 0.444);
+}
+
+
+/*estilizando botao editar e deletar tarefas*/
+.btn-trash, .btn-edit {
+    width: auto;
+    border: none;
+    background: none;
+}
+/*img btn editar e lixeira*/
+.img-edit, .trash { 
+    width: 40px;
+    height: 40px;
+}
+/**/
+.img-edit:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgb(151, 231, 31);
+}
+.trash:hover {
+    cursor: pointer;
+    background-color: rgba(244, 8, 8, 0.834);
+}
+
+/*
+  --> container das tags--> input:text e botao adicionar 
+*/
+.container-add-contents {
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+#input-Task, #btn-add{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(59, 86, 95);
+}
+
+#input-Task{ /*input escrever nome da tarefa*/
+    padding: 10px;
+    width: 80%;
+}
+#btn-add { /*btn add tarefas*/
+    width: 20%;
+}
+
+#btn-add:hover {
+    cursor: pointer;
+    background-color: #31e375;
+}
+
+/*tarefas criadas por js*/
+
+#tasks-container { /*container onde serão inseridos os elementos criados por JavaScripts*/
+    padding: 10px;
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+/*
+input type checkbox
+*/
+.checkbox { /*estiliza o checkbox*/
+    width: 60px;
+    height: 20px;
+}
+
+
+/*container das tarefas com os elementos --> input:checkbox, span, button + img*/
+.box-task {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-transform: capitalize;
+    font: normal 18pt Arial;
+    color: rgb(21, 20, 20);
+    margin: 15px 0 15px 0;
+    border-bottom: 1px  solid rgb(183, 178, 178);
+}
+
+/* Estilo do modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro */
+}
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 80%;
+    min-height: 170px;
+}
+
+#inputEditTaskName {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border: 2px solid;
+}
+/* Botão de confirmar/fechar o modal */
+.box-buttons {
+    display: flex;
+    gap: 10px;
+    width: 300px;
+    margin: 10px auto;
+}
+#confirm, #close {
+    font-size: 35px;
+    font-weight: bold;
+    width: 150px;
+    border: 0.5px solid rgba(69, 69, 69, 0.521);
+}
+#confirm {
+    color: rgb(71, 255, 47);
+}
+#close {
+    color: red; 
+}
+#confirm:hover{
+    cursor: pointer;
+    transition: 0.7s;
+    color: black;
+    background-color: rgba(21, 220, 48, 0.688);
+}
+#close:hover{
+    cursor: pointer;
+    transition: 0.7s;
+    color: black;
+    background-color: rgba(255, 0, 0, 0.79);
+}
