@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do - list</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
+</head>
+<body >
+
+    
+    <div class="wrapper" id="wrapper">
+        <!-- Modal -->
+        
+        <div id="myModal" class="modal">
+            <!---->
+            <div class="modal-content">
+                <h1 class="title">Digite a nova Tarefa</h1>
+                <h2 id="idTarefaEdicao"></h2>
+                <input type="text" placeholder="Insira o nome da tarefa" id="inputEditTaskName">
+                <div class="box-buttons">
+                    <button type="submit" id="confirm" class="btnUpdateTask">&#10004;</button>
+                    <button type="submit" id="close">&#10006;</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-add-contents">
+            <input type="text" placeholder="Insira o nome da tarefa" id="input-Task" >
+            <button type="submit"id="btn-add">ADD</button>
+            <!--<input type="button" value="ADD" id="btn-add">-->
+        </div>
+        <div id="tasks-container">
+            <p id="title-list"> lista Vazia</p>
+
+               
+        </div>
+         
+    </div> 
+</body>
+</html>
