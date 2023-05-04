@@ -5,7 +5,7 @@
 }
 body {
     background-color: rgba(166, 167, 175, 0.271);
-    padding: 20px;
+    padding: 10px;
 }
 
 /*
@@ -51,14 +51,13 @@ p {
 
 /*estilizando botao editar e deletar tarefas*/
 .btn-trash, .btn-edit {
-    width: auto;
     border: none;
     background: none;
 }
 /*img btn editar e lixeira*/
 .img-edit, .trash { 
-    width: 40px;
-    height: 40px;
+    max-width: 40px;
+    max-height: 40px;
 }
 /**/
 .img-edit:hover {
@@ -75,7 +74,7 @@ p {
   --> container das tags--> input:text e botao adicionar 
 */
 .container-add-contents {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     margin-bottom: 50px;
 }
@@ -104,7 +103,7 @@ p {
 #tasks-container { /*container onde serão inseridos os elementos criados por JavaScripts*/
     padding: 10px;
     background-color: whitesmoke;
-    width: 100%;
+    max-width: 100%;
 }
 
 /*
@@ -118,7 +117,7 @@ input type checkbox
 
 /*container das tarefas com os elementos --> input:checkbox, span, button + img*/
 .box-task {
-    width: 100%;
+    max-width: 100%;
     min-height: 50px;
     display: flex;
     gap: 10px;
@@ -141,6 +140,7 @@ input type checkbox
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro */
+    padding: 10px;
 }
 /* Conteúdo do modal */
 .modal-content {
@@ -148,7 +148,7 @@ input type checkbox
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    max-width: 80%;
+    max-width: 100%;
     min-height: 170px;
 }
 
@@ -189,4 +189,20 @@ input type checkbox
     transition: 0.7s;
     color: black;
     background-color: rgba(255, 0, 0, 0.79);
+}
+
+@media (max-width: 520px){
+    p {
+        min-width: 100px;
+        margin: 10px auto;
+        
+    }
+    .box-task {
+        padding: 10px;
+    }
+    #confirm, #close {
+        width: 50%;
+        margin: 0 auto;
+    }
+
 }
